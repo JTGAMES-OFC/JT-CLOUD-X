@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JT Cloud X</title>  
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      background-color: #121212;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #00ff99;
+    }
+    .search-box input {
+      padding: 8px 12px;
+      border-radius: 20px;
+      border: none;
+      outline: none;
+      background-color: #2a2a2a;
+      color: white;
+    }
+    .section-title {
+      padding: 20px;
+      font-size: 22px;
+      font-weight: bold;
+    }
+    .game-row {
+      display: flex;
+      overflow-x: auto;
+      gap: 15px;
+      padding: 0 20px 20px;
+    }
+    .game-card {
+      min-width: 120px;
+      flex-shrink: 0;
+      background-color: #1e1e1e;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: transform 0.2s;
+    }
+    .game-card:hover {
+      transform: scale(1.05);
+    }
+    .game-card img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-bottom: 2px solid #00ff99;
+    }
+    .planos, .recursos {
+      padding: 20px;
+    }
+    .plan-card, .info-card {
+      background-color: #1f1f1f;
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
+    .plan-card h3, .info-card h3 {
+      color: #00ff99;
+    }
+    .plan-card ul, .info-card ul {
+      list-style: none;
+      padding: 0;
+    }
+    .plan-card li, .info-card li {
+      margin-bottom: 8px;
+    }
+    @media (max-width: 600px) {
+      .game-card {
+        min-width: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">JT Cloud X</div>
+    <div class="search-box">
+        <input type="text" id="searchBar" placeholder="Buscar jogos..." onkeyup="searchGames()" class="search-input">
+        
+    </div>
+  </header>
+
+  <!-- Seção: Lançamentos Mais Aguardados -->
+<div class="section-title">Lançamentos Futuros</div>
+<div class="game-row">
+
+  <!-- Grand Theft Auto VI -->
+  <div class="game-card" style="position: relative;">
+    <img src="https://media-rockstargames-com.akamaized.net/mfe6/prod/__common/img/71d4d17edcd49703a5ea446cc0e588e6.jpg" alt="Grand Theft Auto VI">
+    <div style="position: absolute; bottom: 5px; left: 5px; background: rgba(0,0,0,0.7); color: #fff; padding: 4px 8px; font-size: 12px;">
+      Lançamento: 2025 (Data exata a ser anunciada)
+    </div>
+  </div>
+
+  <!-- The World Its Challengers (TWC) da JT Games -->
+  <div class="game-card" style="position: relative;">
+    <img src="https://38e3604380.cbaul-cdnwnd.com/88f205c201c2aeb4b3818ce32d3535ad/200000042-aa7a0aa7a4/450/1000135309.jpeg" alt="The World Its Challengers">
+    <div style="position: absolute; bottom: 5px; left: 5px; background: rgba(0,0,0,0.7); color: #fff; padding: 4px 8px; font-size: 12px;">
+      Lançamento: 25 de Julho de 2025
+    </div>
+  </div>
+
+  <!-- Inazuma Eleven: Victory Road -->
+  <div class="game-card" style="position: relative;">
+    <img src="https://www.inazuma.jp/victory-road/en/assets/img/shared/ogp_1129.jpg" alt="Inazuma Eleven: Victory Road">
+    <div style="position: absolute; bottom: 5px; left: 5px; background: rgba(0,0,0,0.7); color: #fff; padding: 4px 8px; font-size: 12px;">
+      Lançamento: 2025 (Data exata a ser anunciada)
+    </div>
+  </div>
+
+</div>
+  </div>  
+<!-- Aviso de disponibilidade -->
+<div style="background-color: #ffcc00; color: #000; padding: 15px; text-align: center; font-weight: bold;">
+  Atenção: Os servidores da plataforma estarão disponíveis a partir de <span style="color: red;">Julho de 2025</span>. Fique ligado para mais novidades!
+</div>
+
+<!-- Seções do site começam aqui -->
+  <div>
+  <div class="section-title">Jogos do Catálogo</div>
+  <div class="game-row">
+    <!-- Jogos populares -->
+    <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/1174180/header.jpg" alt="Red Dead Redemption 2"></div>
+    <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/271590/header.jpg" alt="Grand Theft Auto V"></div>
+    <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/812140/header.jpg" alt="Assassin's Creed Odyssey"></div>
+    <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/239140/header.jpg" alt="Dying Light"></div>
+    <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/582010/header.jpg" alt="Monster Hunter: World"></div>
+    <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/413150/header.jpg" alt="Stardew Valley"></div>
+    <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/8930/header.jpg" alt="Sid Meier's Civilization V"></div>
+    <div class="game-card"><img src=
+    .akamai.steamstatic.com/steam/apps/552520/header.jpg" alt="Far Cry 5"></div>
+    <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/391220/header.jpg" alt="Rise of the Tomb Raider"></div>
+    <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/47870/header.jpg" alt="Need for Speed: Hot Pursuit"></div>
+    <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/1222140/header.jpg" alt="Cyberpunk 2077"></div>
+    <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/582160/header.jpg" alt="Assassin’s Creed Origins"></div>
+    <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/218620/header.jpg" alt="PAYDAY 2"></div>
+    <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/703080/header.jpg" alt="House Flipper"></div>
+    <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/1151340/header.jpg" alt="Fallout 76"></div>
+    <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/620/header.jpg" alt="Portal 2"></div>
+    <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/268500/header.jpg" alt="XCOM 2"></div>
+    <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/230410/header.jpg" alt="Warframe"></div>
+    <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/281990/header.jpg" alt="Stellaris"></div>
+    <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/1222670/header.jpg" alt="Marvel’s Avengers"></div>
+    <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/306130/header.jpg" alt="The Elder Scrolls Online"></div>
+    <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/1091500/header.jpg" alt="Cyberpunk 2077"></div>
+    <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/200510/header.jpg" alt="XCOM: Enemy Unknown"></div>
+    <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/1263850/header.jpg" alt="F1 2021"></div>
+<div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/1345960/header.jpg" alt="FIFA 22"></div>
+<div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/1080110/header.jpg" alt="eFootball PES 2021"></div>
+<div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/1144200/header.jpg" alt="GTFO"></div>
+<div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/255710/header.jpg" alt="Cities: Skylines"></div>
+<div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/12210/header.jpg" alt="Grand Theft Auto IV: Complete Edition"></div>
+<div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/12100/header.jpg" alt="GTA III, Vice City e San Andreas (pack)"></div>
+<div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/244210/header.jpg" alt="Assetto Corsa"></div>
+<div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/690790/header.jpg" alt="Project CARS 2"></div>
+<div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/646910/header.jpg" alt="Forza Horizon 4"></div>
+<!-- Novos jogos adicionados -->
+<div class="game-card"><img src="https://www.minecraft.net/content/dam/games/minecraft/key-art/Minecraft-Java-Edition-Key-Art.jpg" alt="Minecraft: Java Edition"></div>
+<div class="game-card"><img src="https://www.minecraft.net/content/dam/games/minecraft/key-art/Minecraft-Bedrock-Edition-Key-Art.jpg" alt="Minecraft: Bedrock Edition"></div>
+<div class="game-card"><img src="https://www.minecraft.net/content/dam/games/minecraft-dungeons/key-art/Minecraft-Dungeons-Key-Art.jpg" alt="Minecraft Dungeons"></div>
+<div class="game-card"><img src="https://www.minecraft.net/content/dam/games/minecraft-legends/key-art/Minecraft-Legends-Key-Art.jpg" alt="Minecraft Legends"></div>
+
+<div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/1665460/header.jpg" alt="eFootball 2023"></div>
+<div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/1259970/header.jpg" alt="eFootball PES 2021"></div>
+<div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/996470/header.jpg" alt="eFootball PES 2020"></div>
+
+<div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/1248130/header.jpg" alt="Farming Simulator 22"></div>
+<div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/787860/header.jpg" alt="Farming Simulator 19"></div>
+<div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/447020/header.jpg" alt="Farming Simulator 17"></div>
+
+<div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/1593500/header.jpg" alt="God of War"></div>
+<div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/292030/header.jpg" alt="The Witcher 3: Wild Hunt"></div>
+<div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/814380/header.jpg" alt="Sekiro: Shadows Die Twice"></div>
+
+<div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/12100/header.jpg" alt="GTA III"></div>
+<div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/12110/header.jpg" alt="GTA: Vice City"></div>
+<div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/12120/header.jpg" alt="GTA: San Andreas"></div>
+
+<div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/1293830/header.jpg" alt="Forza Horizon 4"></div>
+<div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/1222680/header.jpg" alt="Need for Speed Heat"></div>
+<div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/805550/header.jpg" alt="Assetto Corsa Competizione"></div>
+
+<div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/2000950/header.jpg" alt="Call of Duty: Modern Warfare"></div>
+<div class="game-card"><img src="https://cdn2.unrealengine.com/Fortnite%2Fbattle-royale%2Fhome%2FBR07_Social_Announce_KeyArt_1920x1080-1920x1080-2cbe1a2f6c02c6a6a2b8b3b3e5a4f1a7a7a7a7a7.jpg" alt="Fortnite"></div>
+<div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/1172470/header.jpg" alt="Apex Legends"></div>
+  </div>
+  <div class="section-title">Jogos de Sobrevivência</div>
+<div class="game-row">
+  <div class="game-card"><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/242760/header.jpg" alt="The Forest"></div>
+  <div class="game-card"><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1326470/header.jpg" alt="Sons of the Forest"></div>
+  <div class="game-card"><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1194810/header.jpg" alt="Green Hell"></div>
+  <div class="game-card"><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/304240/header.jpg" alt="Resident Evil Revelations 2"></div>
+  <div class="game-card"><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/883710/header.jpg" alt="Resident Evil 2 Remake"></div>
+  <div class="game-card"><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/108600/header.jpg" alt="Project Zomboid"></div>
+  <div class="game-card"><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1129580/header.jpg" alt="DayZ"></div>
+  <div class="game-card"><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1086940/header.jpg" alt="Baldur's Gate 3 (modo sobrevivência hardcore)"></div>
+  <div class="game-card"><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/322330/header.jpg" alt="Don't Starve Together"></div>
+  <div class="game-card"><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/346110/header.jpg" alt="ARK: Survival Evolved"></div>
+</div>
+<div class="section-title">Jogos Indie Imperdíveis</div>
+<div class="game-row">
+  <div class="game-card"><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/367520/header.jpg" alt="Hollow Knight"></div>
+  <div class="game-card"><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/250900/header.jpg" alt="The Binding of Isaac: Rebirth"></div>
+  <div class="game-card"><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1145360/header.jpg" alt="Hades"></div>
+  <div class="game-card"><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/504230/header.jpg" alt="Celeste"></div>
+  <div class="game-card"><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/413150/header.jpg" alt="Stardew Valley"></div>
+  <div class="game-card"><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/291650/header.jpg" alt="Pillars of Eternity"></div>
+  <div class="game-card"><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1147560/header.jpg" alt="Spiritfarer"></div>
+  <div class="game-card"><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/105600/header.jpg" alt="Terraria"></div>
+  <div class="game-card"><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/753640/header.jpg" alt="Outer Wilds"></div>
+  <div class="game-card"><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/628770/header.jpg" alt="Slay the Spire"></div>
+</div>
+  <div class="section-title">Jogos de Terror e Suspense</div>
+<div class="game-row">
+  <div class="game-card"><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1222140/header.jpg" alt="The Callisto Protocol"></div>
+  <div class="game-card"><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1693980/header.jpg" alt="The Outlast Trials"></div>
+  <div class="game-card"><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/26800/header.jpg" alt="Dead Space (2008)"></div>
+  <div class="game-card"><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1693980/header.jpg" alt="Outlast"></div>
+  <div class="game-card"><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/418370/header.jpg" alt="Resident Evil 7 Biohazard"></div>
+  <div class="game-card"><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/883710/header.jpg" alt="Resident Evil 2 Remake"></div>
+  <div class="game-card"><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1196590/header.jpg" alt="The Medium"></div>
+  <div class="game-card"><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1145360/header.jpg" alt="Hades (mistura terror mitológico)"></div>
+  <div class="game-card"><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/509980/header.jpg" alt="Friday the 13th: The Game"></div>
+  <div class="game-card"><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/530620/header.jpg" alt="Little Nightmares"></div>
+</div>
+<div class="section-title">RPGs e Aventura Épica</div>
+<div class="game-row">
+  <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/1245620/header.jpg" alt="Elden Ring"></div>
+  <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/1091500/header.jpg" alt="Cyberpunk 2077"></div>
+  <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/1174180/header.jpg" alt="Red Dead Redemption 2"></div>
+  <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/292030/header.jpg" alt="The Witcher 3: Wild Hunt"></div>
+  <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/1222670/header.jpg" alt="Marvel’s Avengers"></div>
+  <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/582160/header.jpg" alt="Assassin's Creed Origins"></div>
+  <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/812140/header.jpg" alt="Assassin’s Creed Odyssey"></div>
+  <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/374320/header.jpg" alt="Dark Souls III"></div>
+  <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/20570/header.jpg" alt="Dragon Age: Origins"></div>
+  <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/72850/header.jpg" alt="The Elder Scrolls V: Skyrim"></div>
+</div>
+  <div class="section-title">Jogos da Rockstar Games</div>
+<div class="game-row">
+  <!-- Série Grand Theft Auto -->
+  <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/12100/header.jpg" alt="Grand Theft Auto III"></div>
+  <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/12110/header.jpg" alt="Grand Theft Auto: Vice City"></div>
+  <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/12120/header.jpg" alt="Grand Theft Auto: San Andreas"></div>
+  <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/271590/header.jpg" alt="Grand Theft Auto V"></div>
+  <!-- Série Red Dead -->
+  <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/1174180/header.jpg" alt="Red Dead Redemption 2"></div>
+  <!-- Outros títulos -->
+  <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/12230/header.jpg" alt="Bully: Scholarship Edition"></div>
+  <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/204100/header.jpg" alt="Max Payne 3"></div>
+  <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/110800/header.jpg" alt="L.A. Noire"></div>
+  <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/12150/header.jpg" alt="Manhunt"></div>
+  <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/12360/header.jpg" alt="Midnight Club II"></div>
+</div>
+<div class="section-title">Jogos da Xbox Game Studios</div>
+<div class="game-row">
+  <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/1293830/header.jpg" alt="Halo: The Master Chief Collection"></div>
+  <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/976730/header.jpg" alt="Halo Infinite"></div>
+  <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/1097840/header.jpg" alt="Microsoft Flight Simulator"></div>
+  <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/1263850/header.jpg" alt="Forza Horizon 5"></div>
+  <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/362960/header.jpg" alt="Gears 5"></div>
+</div>
+<div class="section-title">Jogos com Controles Touch</div>
+<div class="game-row">
+  <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/413150/header.jpg" alt="Stardew Valley"></div>
+  <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/105600/header.jpg" alt="Terraria"></div>
+  <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/945360/header.jpg" alt="Among Us"></div>
+  <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/367520/header.jpg" alt="Hollow Knight"></div>
+  <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/47870/header.jpg" alt="Need for Speed: Hot Pursuit"></div>
+  <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/239140/header.jpg" alt="Dying Light"></div>
+  <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/1222670/header.jpg" alt="Marvel’s Avengers"></div>
+  <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/620/header.jpg" alt="Portal 2"></div>
+  <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/703080/header.jpg" alt="House Flipper"></div>
+  <div class="game-card"><img src="https://cdn.akamai.steamstatic.com/steam/apps/1517290/header.jpg" alt="Pokémon Legends: Z-A"></div>
+</div>
+
+<section class="pricing-section">
+  <h2 class="section-title">Planos JT CLOUD X</h2>
+  <div class="plans">
+    
+    <!-- Plano Grátis -->
+    <div class="plan-card">
+      <h3>Grátis</h3>
+      <p>R$ 0/mês</p>
+      <p>Acesso a jogos gratuitos, com tempo e qualidade limitados.</p>
+      <button onclick="toggleList('free-games')">Ver jogos disponíveis</button>
+      <ul id="free-games" class="game-list" style="display:none;">
+        <li>Fortnite</li>
+        <li>Rocket League</li>
+        <li>Roblox</li>
+        <li>Brawlhalla</li>
+        <li>TrackMania</li>
+        <li>Warframe</li>
+        <li>Destiny 2</li>
+        <li>Apex Legends</li>
+        <li>Call of Duty: Warzone</li>
+        <li>The World Its Challengers (demo)</li>
+      </ul>
+    </div>
+
+    <!-- Plano Bronze -->
+    <div class="plan-card">
+      <h3>Bronze</h3>
+      <p>R$ 14,90/mês</p>
+      <p>Acesso a jogos populares e leves.</p>
+      <button onclick="toggleList('bronze-games')">Ver jogos disponíveis</button>
+      <ul id="bronze-games" class="game-list" style="display:none;">
+        <li>Inclui tudo do plano Grátis</li>
+        <li>Minecraft Classic</li>
+        <li>PES 2021 Lite</li>
+        <li>Cuphead</li>
+        <li>Stardew Valley</li>
+        <li>Sonic Mania</li>
+        <li>Hollow Knight</li>
+        <li>Among Us</li>
+        <li>Undertale</li>
+        <li>The World Its Challengers (versão base)</li>
+      </ul>
+    </div>
+
+    <!-- Plano Prata -->
+    <div class="plan-card">
+      <h3>Prata</h3>
+      <p>R$ 29,90/mês</p>
+      <p>Mais jogos premium e opções de console.</p>
+      <button onclick="toggleList('silver-games')">Ver jogos disponíveis</button>
+      <ul id="silver-games" class="game-list" style="display:none;">
+        <li>Inclui tudo do plano Bronze</li>
+        <li>GTA San Andreas</li>
+        <li>Minecraft Bedrock</li>
+        <li>eFootball 2024</li>
+        <li>The Sims 4</li>
+        <li>Batman Arkham City</li>
+        <li>Resident Evil 4 (Remake - demo)</li>
+        <li>Naruto Storm 4</li>
+        <li>God of War 3 Remastered</li>
+        <li>The World Its Challengers (com DLCs)</li>
+      </ul>
+    </div>
+
+    <!-- Plano Ouro -->
+    <div class="plan-card">
+      <h3>Ouro</h3>
+      <p>R$ 49,90/mês</p>
+      <p>Quase todos os jogos liberados, alta qualidade de stream.</p>
+      <button onclick="toggleList('gold-games')">Ver jogos disponíveis</button>
+      <ul id="gold-games" class="game-list" style="display:none;">
+        <li>Inclui tudo do plano Prata</li>
+        <li>The Last of Us Parte 1</li>
+        <li>GTA V</li>
+        <li>RDR2</li>
+        <li>FIFA 24</li>
+        <li>Hogwarts Legacy</li>
+        <li>Assassin’s Creed Valhalla</li>
+        <li>Elden Ring</li>
+        <li>Need for Speed Heat</li>
+        <li>Inazuma Eleven Victory Road (pós-lançamento)</li>
+        <li>The World Its Challengers (versão completa)</li>
+      </ul>
+    </div>
+
+   <!-- Plano JT Ultra -->
+<div class="plan-card highlight">
+  <h3>JT Ultra</h3>
+  <p>R$ 79,90/mês <strong>1º mês grátis!</strong></p>
+  <p>Plano completo com tudo que o JT CLOUD X pode oferecer. Acesso total, qualidade máxima e vantagens exclusivas.</p>
+  <button onclick="toggleList('ultra-games')">Ver jogos e benefícios</button>
+  <ul id="ultra-games" class="game-list" style="display:none;">
+    <li>Todos os jogos do catálogo (incluindo lançamentos e exclusivos)</li>
+    <li>Modo de streaming em até 4K com ray tracing</li>
+    <li>Chat de voz integrado nos jogos multiplayer</li>
+    <li>Modo Transição: alterne entre celular, PC e TV sem encerrar a sessão</li>
+    <li>GTA V Online</li>
+    <li>Game Boost: prioridade de conexão nos servidores e menor latência</li>
+    <li>Download temporário de jogos (jogue offline até 48h)</li>
+    <li>Replay instantâneo + gravação automática de gameplay</li>
+    <li>Controle de toque personalizável e suporte total a gamepad</li>
+    <li>Suporte a mods em jogos compatíveis</li>
+    <li>Suporte VIP 24h com atendimento em até 20 minutos</li>
+    <li>Salvamento ilimitado na nuvem</li>
+    <li>Modo Família com até 4 perfis adicionais (controle parental incluso)</li>
+    <li>1 mês grátis ao assinar</li>
+    <li>Acesso beta fechado de novos recursos do JT Cloud</li>
+    <li>Eventos online exclusivos para membros Ultra</li>
+    <li>Estatísticas avançadas de gameplay (mapas de calor, tempo de jogo, desempenho)</li>
+    <li>Ferramenta de gravação e clipes editáveis dentro do app</li>
+    <li>Integração com Discord e Twitch para streaming direto</li>
+    <li>Badge de perfil Ultra exclusivo na comunidade JT</li>
+  </ul>
+</div>
+
+ <script>
+    function searchGames() {
+      let input = document.getElementById('searchBar').value.toLowerCase();
+      let cards = document.querySelectorAll('.game-card');
+
+      cards.forEach(card => {
+        let altText = card.querySelector('img').alt.toLowerCase();
+        if (altText.includes(input)) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
+
+
+  </div>
+</section>
+
+<script>
+  function toggleList(id) {
+    const list = document.getElementById(id);
+    list.style.display = list.style.display === "none" ? "block" : "none";
+  }
+</script>
+
+  <div class="section-title">Recursos do JT Cloud X</div>
+  <div class="recursos">
+    <div class="info-card">
+      <h3>O que é JT Cloud X?</h3>
+      <ul>
+        <li>Plataforma de jogos em nuvem da JT Games</li>
+        <li>Jogue instantaneamente sem precisar instalar</li>
+        <li>Desempenho ideal em qualquer dispositivo</li>
+        <li>Conecte seu controle e jogue em qualquer lugar</li>
+      </ul>
+    </div>
+    <div class="info-card">
+      <h3>Compatibilidade</h3>
+      <ul>
+        <li>Android, iOS, Windows, Mac e Smart TVs</li>
+        <li>Suporte para teclado, mouse e gamepad</li>
+        <li>Requer conexão mínima de 10 Mbps</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
