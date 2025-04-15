@@ -987,6 +987,116 @@
 </body>
 </html>
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Testando Anúncio</title>
+  <style>
+    .anuncio-adsense {
+      max-width: 100%;
+      width: 100%;
+      max-width: 728px;
+      display: flex;
+      align-items: center;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 10px;
+      margin: 20px auto;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1000; /* Garante que o anúncio fique visível sobre outros elementos */
+    }
+
+    .anuncio-adsense img {
+      width: 150px;
+      height: auto;
+      border-radius: 8px;
+      margin-right: 15px;
+      flex-shrink: 0;
+    }
+
+    .anuncio-adsense .conteudo {
+      flex: 1;
+    }
+
+    .anuncio-adsense h3 {
+      margin: 0 0 5px;
+      font-size: 18px;
+      color: #222;
+    }
+
+    .anuncio-adsense p {
+      font-size: 14px;
+      color: #555;
+      margin: 0 0 10px;
+    }
+
+    .anuncio-adsense a {
+      display: inline-block;
+      padding: 8px 12px;
+      background: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 13px;
+    }
+
+    .anuncio-adsense a:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Container onde o anúncio será inserido -->
+  <div id="anuncioContainer" class="anuncio-adsense"></div>
+
+  <script>
+    // Definição dos anúncios
+    const anuncios = [
+      {
+        titulo: "GTA V",
+        descricao: "Ação, crimes e liberdade total em Los Santos. Jogue agora na nuvem!",
+        imagem: "https://cdn.akamai.steamstatic.com/steam/apps/271590/header.jpg",
+        link: "https://jtgames-ofc.github.io/JT-CLOUD-X/GtaV"
+      },
+      {
+        titulo: "Forza Horizon 4",
+        descricao: "Corridas incríveis nas paisagens britânicas. Desempenho e gráficos insanos!",
+        imagem: "https://cdn.akamai.steamstatic.com/steam/apps/1293830/header.jpg",
+        link: "https://jtgames-ofc.github.io/JT-CLOUD-X/ForzaHorizon4"
+      },
+      {
+        titulo: "EA Sports FC 25",
+        descricao: "Monte seu time e domine o campo com os melhores gráficos da franquia!",
+        imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROsVMQmjHpGTA5JoC3MXH_6In5A-aHsSnvHq6DFnUsQAJjjARCymXS30eW&s=10",
+        link: "https://jtgames-ofc.github.io/JT-CLOUD-X/EaFc25"
+      }
+    ];
+
+    // Seleção aleatória de um anúncio
+    const escolhido = anuncios[Math.floor(Math.random() * anuncios.length)];
+
+    // Inserir o anúncio no container
+    document.getElementById("anuncioContainer").innerHTML = `
+      <img src="${escolhido.imagem}" alt="${escolhido.titulo}">
+      <div class="conteudo">
+        <h3>${escolhido.titulo}</h3>
+        <p>${escolhido.descricao}</p>
+        <a href="${escolhido.link}" target="_blank">Jogar agora</a>
+      </div>
+    `;
+  </script>
+
+</body>
+</html>
 
   </div>
 </section>
