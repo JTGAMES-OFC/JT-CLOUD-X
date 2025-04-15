@@ -1007,11 +1007,8 @@
       margin: 20px auto;
       font-family: Arial, sans-serif;
       overflow: hidden;
-      position: absolute;
+      position: relative; /* Remover a fixação */
       bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 1000; /* Garante que o anúncio fique visível sobre outros elementos */
     }
 
     .anuncio-adsense img {
@@ -1051,12 +1048,30 @@
     .anuncio-adsense a:hover {
       background: #0056b3;
     }
+
+    /* Garantir que o anúncio aparece no final da página */
+    .footer {
+      height: 80px; /* Espaço para o anúncio */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   </style>
 </head>
 <body>
 
-  <!-- Container onde o anúncio será inserido -->
-  <div id="anuncioContainer" class="anuncio-adsense"></div>
+  <!-- Conteúdo da página -->
+  <div class="content">
+    <h1>Conteúdo do site</h1>
+    <p>Rolando para baixo, o anúncio deve aparecer após o conteúdo...</p>
+    <p>Continue rolando até o final da página para ver o anúncio aparecer na parte inferior.</p>
+    <!-- Mais conteúdo aqui -->
+  </div>
+
+  <!-- Footer com espaço para o anúncio -->
+  <div class="footer">
+    <div id="anuncioContainer" class="anuncio-adsense"></div>
+  </div>
 
   <script>
     // Definição dos anúncios
@@ -1097,16 +1112,6 @@
 
 </body>
 </html>
-
-  </div>
-</section>
-
-<script>
-  function toggleList(id) {
-    const list = document.getElementById(id);
-    list.style.display = list.style.display === "none" ? "block" : "none";
-  }
-</script>
 
   <div class="section-title">Recursos do JT Cloud X</div>
   <div class="recursos">
