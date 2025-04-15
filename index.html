@@ -24,6 +24,25 @@
       font-weight: bold;
       color: #00ff99;
     }
+    .header-buttons {
+      display: flex;
+      gap: 10px;
+    }
+    .header-buttons button {
+      padding: 8px 16px;
+      background-color: #00ff99;
+      color: #121212;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 14px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .header-buttons button:hover {
+      background-color: #00cc7a;
+      transform: scale(1.1);
+    }
     .search-box input {
       padding: 8px 12px;
       border-radius: 20px;
@@ -91,11 +110,20 @@
 <body>
   <header>
     <div class="logo">JT Cloud X</div>
+    <div class="header-buttons">
+      <a href="https://jtgames-ofc.github.io/JT-CLOUD-X/Resgatar" style="text-decoration: none;">
+        <button>Resgatar</button>
+      </a>
+    </div>
     <div class="search-box">
         <input type="text" id="searchBar" placeholder="Buscar jogos..." onkeyup="searchGames()" class="search-input">
-        
     </div>
   </header>
+</body>
+</html>
+  </header>
+</body>
+</html>
 
   <!-- Seção: Lançamentos Mais Aguardados -->
 <div class="section-title">Lançamentos Futuros</div>
@@ -113,7 +141,7 @@
   <div class="game-card" style="position: relative;">
     <img src="https://38e3604380.cbaul-cdnwnd.com/88f205c201c2aeb4b3818ce32d3535ad/200000042-aa7a0aa7a4/450/1000135309.jpeg" alt="The World Its Challengers">
     <div style="position: absolute; bottom: 5px; left: 5px; background: rgba(0,0,0,0.7); color: #fff; padding: 4px 8px; font-size: 12px;">
-      Lançamento: 25 de Julho de 2025
+      Lançamento: 25 de Março de 2027
     </div>
   </div>
 
@@ -140,9 +168,44 @@
 
 <!-- Seções do site começam aqui -->
   <div>
-  <div class="section-title">Jogos do Catálogo</div>
+  <div class="section-title">Jogos Populares</div>
   <div class="game-row">
     <!-- Jogos populares -->
+    <a href="https://jtgames-ofc.github.io/JT-CLOUD-X/snowRunner" style="text-decoration: none;">
+  <div class="game-card" style="display: inline-block; width: 210px; height: auto; overflow: hidden;">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKCyyrR9ab2x1hX6MiHCZSfI4o-zcyONI1S2DWGkLXO0ScPl1cz1uO9I4&s=10" alt="SnowRunner" style="width: 100%; height: auto;">
+  </div>
+</a>
+    <a href="https://jtgames-ofc.github.io/JT-CLOUD-X/mortalKombat1" style="text-decoration: none;">
+  <div class="game-card" style="display: inline-block; width: 210px; height: auto; overflow: hidden;">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB6fxidN3c32gwt5Mq4DhZS5kqf54cSO8IpnOeMu6MnofFjgHrCukPvCIx&s=10" alt="Mortal Kombat 1" style="width: 100%; height: auto;">
+  </div>
+</a>
+    <a href="https://jtgames-ofc.github.io/JT-CLOUD-X/sonicfrontiers" style="text-decoration: none;">
+  <div class="game-card" style="display: inline-block; width: 250px; height: auto; overflow: hidden;">
+    <img src="https://cdn.akamai.steamstatic.com/steam/apps/1237320/header.jpg" alt="Sonic Frontiers" style="width: 100%; height: auto;">
+  </div>
+</a>
+    <a href="https://jtgames-ofc.github.io/JT-CLOUD-X/ufl" style="text-decoration: none;">
+  <div class="game-card" style="display: inline-block; width: 270px; height: auto; overflow: hidden;">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF9lcDq6rGTdHA-xyfM0F9TSdss_k7dQc7epTECtgZ97oL6K0dEDrILAU&s=10" alt="UFL" style="width: 100%; height: auto;">
+  </div>
+</a>
+    <a href="https://jtgames-ofc.github.io/JT-CLOUD-X/spiderman-remastered" style="text-decoration: none;">
+  <div class="game-card" style="display: inline-block; width: 210px; height: auto; overflow: hidden;">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoYvx2II7eBHU0hC-QVDYYVoAzOIGstj7V0kHlv60upQkGp1hSZXNmnQQo&s=10" alt="Spider-Man Remastered" style="width: 100%; height: auto;">
+  </div>
+</a>
+    <a href="https://jtgames-ofc.github.io/JT-CLOUD-X/spiderman-milesmorales" style="text-decoration: none;">
+  <div class="game-card" style="display: inline-block; width: 210px; height: auto; overflow: hidden;">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStTENH0aYXFzyLbmKFTiIeCE9x5vM4qMeuQplKw7YC2PvS4wIKQjs8SHk&s=10" alt="Spider-Man: Miles Morales" style="width: 100%; height: auto;">
+  </div>
+</a>
+    <a href="https://jtgames-ofc.github.io/JT-CLOUD-X/ghostoftsushima" style="text-decoration: none;">
+  <div class="game-card" style="display: inline-block; width: 210px; height: auto; overflow: hidden;">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTShgpM4_Z-3T2NkzMF4LrW4rIE9M5wZy3tVBAhrV0cSm79CVKRUYt-NKE&s=10" alt="Ghost of Tsushima" style="width: 100%; height: auto;">
+  </div>
+</a>
     <a href="https://jtgames-ofc.github.io/JT-CLOUD-X/gowragnarok" style="text-decoration: none;">
   <div class="game-card" style="display: inline-block; width: 210px; height: auto; overflow: hidden;">
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAN0kiKuOBnQ1UJnAjF_WA50X3Si2KeSuz3CvtGhw_5smiLhrvgY8dQlo&s=10" alt="God of War: Ragnarok" style="width: 100%; height: auto;">
@@ -365,6 +428,11 @@
 </div>
 <div class="section-title">Jogos Indie Imperdíveis</div>
 <div class="game-row">
+    <a href="https://jtgames-ofc.github.io/JT-CLOUD-X/choochoocharles" style="text-decoration: none;">
+  <div class="game-card" style="display: inline-block; width: 250px; height: auto; overflow: hidden;">
+    <img src="https://cdn.akamai.steamstatic.com/steam/apps/1766740/header.jpg" alt="Choo-Choo Charles" style="width: 100%; height: auto;">
+  </div>
+</a>
     <a href="https://jtgames-ofc.github.io/JT-CLOUD-X/undertale" style="text-decoration: none;">
   <div class="game-card" style="display: inline-block; width: 210px; height: auto; overflow: hidden;">
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1fiYvk0v4hJIXoaOh9WJIL-j6ME6fVhPPwuDdwZ5Fc5nb4MQPyU0JSK39&s=10" alt="Undertale" style="width: 100%; height: auto;">
@@ -440,6 +508,21 @@
 </div>    
 <div class="section-title">Jogos da Xbox Game Studios</div>
 <div class="game-row">
+    <a href="https://jtgames-ofc.github.io/JT-CLOUD-X/codmw2" style="text-decoration: none;">
+  <div class="game-card" style="display: inline-block; width: 250px; height: auto; overflow: hidden;">
+    <img src="https://cdn.akamai.steamstatic.com/steam/apps/1938090/header.jpg" alt="Call of Duty: Modern Warfare II" style="width: 100%; height: auto;">
+  </div>
+</a>
+    <a href="https://jtgames-ofc.github.io/JT-CLOUD-X/grounded" style="text-decoration: none;">
+  <div class="game-card" style="display: inline-block; width: 250px; height: auto; overflow: hidden;">
+    <img src="https://cdn.akamai.steamstatic.com/steam/apps/962130/header.jpg" alt="Grounded" style="width: 100%; height: auto;">
+  </div>
+</a>
+    <a href="https://jtgames-ofc.github.io/JT-CLOUD-X/forzamotorsport" style="text-decoration: none;">
+  <div class="game-card" style="display: inline-block; width: 250px; height: auto; overflow: hidden;">
+    <img src="https://cdn.akamai.steamstatic.com/steam/apps/2440510/header.jpg" alt="Forza Motorsport" style="width: 100%; height: auto;">
+  </div>
+</a>
     <a href="https://jtgames-ofc.github.io/JT-CLOUD-X/forza5" style="text-decoration: none;">
   <div class="game-card" style="display: inline-block; width: 250px; height: auto; overflow: hidden;">
     <img src="https://cdn.akamai.steamstatic.com/steam/apps/1551360/header.jpg" alt="Forza Horizon 5" style="width: 100%; height: auto;">
@@ -558,99 +641,6 @@
   </script>
 </body>
 </html>
-
-<section class="pricing-section">
-  <h2 class="section-title">Planos JT CLOUD X</h2>
-  <div class="plans">
-    
-    <!-- Plano Grátis -->
-    <div class="plan-card">
-      <h3>Grátis</h3>
-      <p>Acesso a jogos gratuitos, com tempo e qualidade limitados.</p>
-      <button onclick="toggleList('free-games')">Ver jogos disponíveis</button>
-      <ul id="free-games" class="game-list" style="display:none;">
-       <li>60 minutos por seção</li>
-        <li>720p</li>
-        <li>Fortnite</li>
-        <li>Roblox</li>
-        <li>Brawlhalla</li>
-        <li>TrackMania</li>
-        <li>Warframe</li>
-        <li>Destiny 2</li>
-        <li>Apex Legends</li>
-        <li>The World Its Challengers (demo)</li>
-      </ul>
-    </div>
-    <!-- Plano Prata -->
-    <div class="plan-card">
-      <h3>Prata</h3>
-      <p>R$ 29,90/mês</p>
-      <p>Mais jogos premium e opções de console.</p>
-      <button onclick="toggleList('silver-games')">Ver jogos disponíveis</button>
-      <ul id="silver-games" class="game-list" style="display:none;">
-        <li>Inclui tudo do plano Bronze</li>
-        <li>GTA San Andreas</li>
-        <li>Minecraft Bedrock</li>
-        <li>eFootball 2024</li>
-        <li>The Sims 4</li>
-        <li>Batman Arkham City</li>
-        <li>Resident Evil 4 (Remake - demo)</li>
-        <li>Naruto Storm 4</li>
-        <li>God of War 3 Remastered</li>
-        <li>The World Its Challengers (com DLCs)</li>
-      </ul>
-    </div>
-
-    <!-- Plano Ouro -->
-    <div class="plan-card">
-      <h3>Ouro</h3>
-      <p>R$ 49,90/mês</p>
-      <p>Quase todos os jogos liberados, alta qualidade de stream.</p>
-      <button onclick="toggleList('gold-games')">Ver jogos disponíveis</button>
-      <ul id="gold-games" class="game-list" style="display:none;">
-        <li>Inclui tudo do plano Prata</li>
-        <li>The Last of Us Parte 1</li>
-        <li>GTA V</li>
-        <li>RDR2</li>
-        <li>FIFA 24</li>
-        <li>Hogwarts Legacy</li>
-        <li>Assassin’s Creed Valhalla</li>
-        <li>Elden Ring</li>
-        <li>Need for Speed Heat</li>
-        <li>Inazuma Eleven Victory Road (pós-lançamento)</li>
-        <li>The World Its Challengers (versão completa)</li>
-      </ul>
-    </div>
-
-   <!-- Plano JT Ultra -->
-<div class="plan-card highlight">
-  <h3>JT Ultra</h3>
-  <p>R$ 79,90/mês <strong>1º mês grátis!</strong></p>
-  <p>Plano completo com tudo que o JT CLOUD X pode oferecer. Acesso total, qualidade máxima e vantagens exclusivas.</p>
-  <button onclick="toggleList('ultra-games')">Ver jogos e benefícios</button>
-  <ul id="ultra-games" class="game-list" style="display:none;">
-    <li>Todos os jogos do catálogo (incluindo lançamentos e exclusivos)</li>
-    <li>Modo de streaming em até 4K com ray tracing</li>
-    <li>Chat de voz integrado nos jogos multiplayer</li>
-    <li>Modo Transição: alterne entre celular, PC e TV sem encerrar a sessão</li>
-    <li>GTA V Online</li>
-    <li>Game Boost: prioridade de conexão nos servidores e menor latência</li>
-    <li>Download temporário de jogos (jogue offline até 48h)</li>
-    <li>Replay instantâneo + gravação automática de gameplay</li>
-    <li>Controle de toque personalizável e suporte total a gamepad</li>
-    <li>Suporte a mods em jogos compatíveis</li>
-    <li>Suporte VIP 24h com atendimento em até 20 minutos</li>
-    <li>Salvamento ilimitado na nuvem</li>
-    <li>Modo Família com até 4 perfis adicionais (controle parental incluso)</li>
-    <li>1 mês grátis ao assinar</li>
-    <li>Acesso beta fechado de novos recursos do JT Cloud</li>
-    <li>Eventos online exclusivos para membros Ultra</li>
-    <li>Estatísticas avançadas de gameplay (mapas de calor, tempo de jogo, desempenho)</li>
-    <li>Ferramenta de gravação e clipes editáveis dentro do app</li>
-    <li>Integração com Discord e Twitch para streaming direto</li>
-    <li>Badge de perfil Ultra exclusivo na comunidade JT</li>
-  </ul>
-</div>
 
  <script>
     function searchGames() {
