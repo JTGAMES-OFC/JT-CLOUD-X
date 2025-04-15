@@ -1,0 +1,104 @@
+<!DOCTYPE html><html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>CloudX - Status dos Servidores</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 40px;
+      background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+      font-family: "Segoe UI", sans-serif;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }h1 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #00bfff;
+}
+
+.server-box {
+  background-color: #1f1f1f;
+  border: 2px solid #333;
+  border-radius: 16px;
+  padding: 25px;
+  width: 360px;
+  margin: 15px;
+  box-shadow: 0 0 15px rgba(0, 191, 255, 0.2);
+  transition: 0.3s;
+}
+
+.server-box:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 25px rgba(0, 191, 255, 0.4);
+}
+
+.server-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #00bfff;
+}
+
+.status {
+  font-weight: bold;
+}
+
+.online {
+  color: #4caf50;
+}
+
+.maintenance {
+  color: #ffa500;
+}
+
+.offline {
+  color: #ff4444;
+}
+
+.info {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #ccc;
+}
+
+.label {
+  font-weight: bold;
+  color: #aaa;
+}
+
+footer {
+  margin-top: 40px;
+  font-size: 13px;
+  color: #666;
+}
+
+  </style>
+</head>
+<body>
+  <h1>Status dos Servidores - CloudX</h1>  <div class="server-box" id="server-br">
+    <div class="server-title">Servidor Brasil</div>
+    <div>Status: <span class="status offline" id="status-br">Offline</span></div>
+    <div class="info">
+      <div><span class="label">Localização:</span> São Paulo, BR</div>
+      <div><span class="label">Ping médio:</span> <span id="ping-br">Indisponível</span></div>
+      <div><span class="label">Uptime:</span> <span id="uptime-br">0%</span></div>
+      <div><span class="label">Manutenção:</span> Toda quinta das 09h às 12h (UTC)</div>
+    </div>
+  </div>  <footer>Última verificação: <span id="last-check"></span></footer>  <script>
+    // Força o servidor a estar offline
+    function atualizarStatus() {
+      const statusEl = document.getElementById("status-br");
+      statusEl.textContent = "Offline";
+      statusEl.className = "status offline";
+
+      document.getElementById("ping-br").textContent = "Indisponível";
+      document.getElementById("uptime-br").textContent = "0%";
+
+      const agoraLocal = new Date().toLocaleString();
+      document.getElementById("last-check").textContent = agoraLocal;
+    }
+
+    atualizarStatus();
+  </script></body>
+</html>
