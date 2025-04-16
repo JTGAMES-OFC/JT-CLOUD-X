@@ -157,30 +157,6 @@
 <button id="add-to-home-button" style="display: none;">
     Adicionar à Tela Inicial
 </button>
-<script>
-    let deferredPrompt;
-    const addButton = document.getElementById('add-to-home-button');
-
-    window.addEventListener('beforeinstallprompt', (e) => {
-        e.preventDefault();
-        deferredPrompt = e;
-
-        addButton.style.display = 'block';
-
-        addButton.addEventListener('click', () => {
-            deferredPrompt.prompt();
-
-            deferredPrompt.userChoice.then((choiceResult) => {
-                if (choiceResult.outcome === 'accepted') {
-                    console.log('Usuário adicionou o app à tela inicial');
-                } else {
-                    console.log('Usuário não adicionou o app à tela inicial');
-                }
-                deferredPrompt = null;
-            });
-        });
-    });
-</script>
 
     <div class="rating-block">
       <div><strong>18+</strong></div>
