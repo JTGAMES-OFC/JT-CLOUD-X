@@ -1,8 +1,8 @@
 {
   "name": "The Last of Us Part II",
-  "short_name": "TLOU II",
+  "short_name": "The Last Of Us II",
   "description": "Jogo The Last of Us Part II para PS4",
-  "start_url": ".",
+  "start_url": "https://jtgames-ofc.github.io/JT-CLOUD-X/TheLastOfUsII",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#000000",
