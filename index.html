@@ -1004,11 +1004,13 @@
       border-radius: 10px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       padding: 10px;
-      margin: 20px auto;
+      margin: 0 auto;
       font-family: Arial, sans-serif;
       overflow: hidden;
-      position: relative; /* Remover a fixação */
-      bottom: 0;
+      position: fixed; /* Fixa o anúncio na tela */
+      bottom: 0; /* Coloca no rodapé */
+      left: 0; /* Faz o anúncio se alinhar à esquerda da tela */
+      z-index: 1000; /* Garante que o anúncio fique acima de outros elementos */
     }
 
     .anuncio-adsense img {
@@ -1048,14 +1050,6 @@
     .anuncio-adsense a:hover {
       background: #0056b3;
     }
-
-    /* Garantir que o anúncio aparece no final da página */
-    .footer {
-      height: 80px; /* Espaço para o anúncio */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
   </style>
 </head>
 <body>
@@ -1063,15 +1057,13 @@
   <!-- Conteúdo da página -->
   <div class="content">
     <h1>Conteúdo do site</h1>
-    <p>Rolando para baixo, o anúncio deve aparecer após o conteúdo...</p>
-    <p>Continue rolando até o final da página para ver o anúncio aparecer na parte inferior.</p>
+    <p>Rolando para baixo, o anúncio deve ficar fixo no rodapé da tela...</p>
+    <p>Continue rolando até o final da página para ver o anúncio fixo na parte inferior da tela.</p>
     <!-- Mais conteúdo aqui -->
   </div>
 
-  <!-- Footer com espaço para o anúncio -->
-  <div class="footer">
-    <div id="anuncioContainer" class="anuncio-adsense"></div>
-  </div>
+  <!-- Rodapé com anúncio fixo -->
+  <div id="anuncioContainer" class="anuncio-adsense"></div>
 
   <script>
     // Definição dos anúncios
@@ -1109,6 +1101,10 @@
       </div>
     `;
   </script>
+
+</body>
+</html>
+
 
 </body>
 </html>
